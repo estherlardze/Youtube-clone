@@ -1,2 +1,1 @@
-# Youtube-clone
-A youtube clone application
+# A youtube clone application
