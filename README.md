@@ -1,1 +1,1 @@
-# A youtube clone application with react js, Rapid apis and mui
+## A youtube clone application with react js, Rapid apis and mui
