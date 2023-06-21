@@ -1,16 +1,19 @@
 import React from 'react';
-import fetchAPI from './fetchAPI';
-import { Stack, Box , Typography} from '@mui/material';
+import { Stack, Box} from '@mui/material';
+import {VideoCard, ChannelCard} from './index'
 
-const Videos = ({selectedCategory}) => {
+const Videos = ({videos}) => {
+  console.log(videos)
   return (
-    <Stack direction='row'
-     justifyContent='start' 
-     alignItems='center' 
-     sx={{flexDirection: 'row', flexWrap:'wrap'}}>
-      <Typography variant='h6'>
-        {selectedCategory} <span style={{color: 'red' }}>Videos</span>
-      </Typography>
+    <Stack direction='row' flexDirection= 'row' flexWrap='wrap' gap={2}
+    sx={{marginLeft:{xs:'5px', md:'10px'}}}>
+      
+      {videos.map((video, index) =>(
+        <Box key={index}>
+          {video.id.videoId && <VideoCard video={video}/>}
+          {/* {video.id.channelId && <ChannelCard video={video}/>} */}
+        </Box>
+      ))}
     </Stack>
   )
 }
