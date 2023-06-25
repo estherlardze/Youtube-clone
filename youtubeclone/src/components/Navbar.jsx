@@ -1,12 +1,20 @@
 import {logo } from '../utils/constants';
 import { Stack, Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
 
 const Navbar = () =>  {
+    const [searchTerm, setSearchTerm] = useState('')
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) =>{
+     e.preventDefault()
+     navigate(`/search/${searchTerm}`)
+     setSearchTerm('')
+    }
 
    return(
     <Stack direction = "row"
@@ -18,13 +26,13 @@ const Navbar = () =>  {
        </Link>
 
        <Paper elevation={3} component='form'
-          onSubmit={()=>{}}
+          onSubmit={handleSubmit}
           sx={{border: 'none', borderRadius: 20, pl:2}} >
           <input type="text"
            placeholder='search...'
            className='search-bar'
-           value=""
-           onChange={()=>{}}/>
+           value={searchTerm}
+           onChange={(e)=> setSearchTerm(e.target.value)}/>
 
           <IconButton>
             <SearchIcon sx={{color: 'red'}}/>
