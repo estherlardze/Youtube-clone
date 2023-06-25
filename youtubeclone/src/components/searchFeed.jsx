@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const searchFeed = () => {
+const SearchFeed = () => {
   return (
     <div>
       searchFeed
@@ -8,4 +9,4 @@ const searchFeed = () => {
   )
 }
 
-export default searchFeed
+export default SearchFeed

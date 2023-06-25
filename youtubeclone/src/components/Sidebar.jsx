@@ -4,7 +4,9 @@ import {categories} from '../utils/constants'
 
 const Sidebar = ({selectedCategory, setSelectedCategory}) => {
   return (
-    <Stack sx={{display: 'flex', flexDirection :{xs:'row', md: 'column'}, color: '#fff', height: {xs: 'auto', md:'95vh'}, backgroungColor: '#000', width: {xs: 'auto', md:'200px'}}}>
+    <Stack 
+     sx={{display: 'flex', flexDirection :{xs:'row', md: 'column'}, color: '#fff',
+      height: {xs: 'auto', md:'95vh'}, backgroungColor: '#1b1d21'}}>
        {categories.map((item) =>(
           <button key={item.name} 
            className='category-btn'
