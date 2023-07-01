@@ -10,13 +10,14 @@ import {Videos} from './'
 const VideoDetail = () => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState(null);
+  const [videos, setVideos] = useState([]);
+  console.log(videos)
 
   useEffect(() =>{
   fetchAPI(`videos?.part=snippet, statistics&id=${id}`)
     .then(data => setVideoDetail(data.items[0]))
 
-  fetchAPI(`search?.part=snippet&relatedToVideoId=${id}&type=video`)
+  fetchAPI(`search?relatedToVideoId=${id}&part=snippet&type=video`)
   .then(data => setVideos(data.items))
    },[id])
 
@@ -52,7 +53,7 @@ const VideoDetail = () => {
             </Box>
          </Box>
 
-         <Box alignItems='center' justifyContent='center' px={{xs:'28px', md:"10px"}} flex={1} py={2}>
+         <Box alignItems='center' justifyContent='flex-end' px={{xs:'28px', md:"10px"}} flex={1} py={2}>
             <Videos videos={videos}/>
         </Box>
 

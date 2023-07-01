@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import {ChannelCard, Videos} from '.'
 import { fetchAPI } from '../utils/fetchAPI';
 
+
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
   const [videos, setVideos] = useState([])
@@ -18,6 +19,7 @@ const ChannelDetail = () => {
     fetchAPI(`search?.part=snippet&channelId=${id}&order=date`)
     .then(data => setVideos(data?.items))
     }, [id])
+    
 
   return (
     <Box sx={{background:'#1b1d21', minHeight:'95vh'}}>

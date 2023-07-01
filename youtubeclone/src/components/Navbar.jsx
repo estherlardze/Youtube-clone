@@ -21,9 +21,9 @@ const Navbar = () =>  {
          alignItems = "center"
          sx={{position: 'sticky', top: 0, background: '#1b1d21', justifyContent: 'space-between', padding: 2}}
          >
-       <Link to='/'>
-       <img src={logo} alt="logo" style={{height: 45}}/>
-       </Link>
+        <Link to='/'>
+        <img src={logo} alt="logo" style={{height: 45}}/>
+        </Link>
 
        <Paper elevation={3} component='form'
           onSubmit={handleSubmit}
@@ -37,6 +37,7 @@ const Navbar = () =>  {
           <IconButton>
             <SearchIcon sx={{color: 'red'}}/>
           </IconButton>
+          
       </Paper>
     </Stack>
   )

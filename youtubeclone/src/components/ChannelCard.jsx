@@ -15,16 +15,18 @@ const ChannelCard = ({channelDetail, marginTop}) => {
            marginTop}} >
 
        <Link to={ `/channel/${channelDetail?.id?.channelId}` }>
-        <CardContent>
-        <CardMedia 
-          image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
-          alt={channelDetail?.snippet?.channelTitle}
-          sx={{width:'180px', height: '180px', borderRadius: '50%'}}
-          />
-          <Typography color='#fff' marginTop={2} >
-            {channelDetail?.snippet?.channelTitle}
-            <CheckCircle fontSize='14px' sx={{color:'gray', marginLeft:'10px'}}/>
-          </Typography>
+         <CardContent>
+
+          <CardMedia 
+            image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+            alt={channelDetail?.snippet?.channelTitle}
+            sx={{width:'180px', height: '180px', borderRadius: '50%'}}
+            />
+
+            <Typography color='#fff' marginTop={2} >
+              {channelDetail?.snippet?.channelTitle}
+              <CheckCircle fontSize='14px' sx={{color:'gray', marginLeft:'10px'}}/>
+            </Typography>
           
             {channelDetail?.statistics?.subscriberscount && (
               <Typography>
