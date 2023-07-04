@@ -8,9 +8,9 @@ import { fetchAPI } from '../utils/fetchAPI';
 
 
 const ChannelDetail = () => {
-  const [channelDetail, setChannelDetail] = useState(null);
-  const [videos, setVideos] = useState([])
-  const {id } = useParams()
+  const [channelDetail, setChannelDetail] = useState();
+  const [videos, setVideos] = useState(null);
+  const {id } = useParams();
   
   useEffect(()=>{
     fetchAPI(`channels?.part=snippet&id=${id}`)
@@ -29,8 +29,8 @@ const ChannelDetail = () => {
         height:'300px'}} />
         <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
       </Box>
-      <Box>
-       <Videos videos={videos}/>
+      <Box >
+       <Videos videos={videos} justifyContent='center'/>
       </Box>
     </Box>
     

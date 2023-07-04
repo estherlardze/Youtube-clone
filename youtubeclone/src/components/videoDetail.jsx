@@ -10,8 +10,8 @@ import {Videos} from './'
 const VideoDetail = () => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videos, setVideos] = useState([]);
-  console.log(videos)
+  const [videos, setVideos] = useState(null);
+
 
   useEffect(() =>{
   fetchAPI(`videos?.part=snippet, statistics&id=${id}`)
@@ -25,11 +25,13 @@ const VideoDetail = () => {
 
   return (
     <Box minHeight='95vh'>
-      <Stack direction={{xs:'column', md:'row'}}> 
+      <Stack direction={{xs:'column', lg:'row'}}> 
+
          <Box flex={2}>
+
            <Box position="sticky" top="90px" width="100%">
              <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls className="react-player"/>
-              <Typography variant={{xs:"body2", md:"h5"}} color='#fff' margin={2}>
+              <Typography variant="h5" color='#fff' margin={2}>
                 {videoDetail.snippet.title}
                </Typography>
 
@@ -41,7 +43,7 @@ const VideoDetail = () => {
                  </Typography>   
                  </Link>
 
-                 <Stack direction='row' mr={2}>
+                 <Stack direction='row' marginRight="20px">
                    <Typography color='#fff' variant='subtitle2' mr={2}>
                     {parseInt(videoDetail.statistics.likeCount).toLocaleString()} likes
                    </Typography>
@@ -49,6 +51,7 @@ const VideoDetail = () => {
                     {parseInt(videoDetail.statistics.viewCount).toLocaleString()} views
                    </Typography>
                  </Stack>
+
                </Stack>
             </Box>
          </Box>

@@ -2,12 +2,18 @@ import React from 'react';
 import { Stack, Box} from '@mui/material';
 import {VideoCard, ChannelCard} from './index'
 
-const Videos = ({videos}) => {
+const Videos = ({videos, justifyContent}) => {
   if(!videos?.length) return "Loading...";
 
   return (
-    <Stack direction='row' alignItems='center' justifyContent='flex-start' flexDirection= 'row' flexWrap='wrap' gap={2}
-    sx={{marginLeft:{xs:'5px', md:'10px'}}}>
+    <Stack direction='row' 
+        alignItems='center'
+        flexDirection= 'row'
+        flexWrap='wrap'
+        gap={2}
+        sx={{marginLeft:{xs:'5px', md:'10px'},
+        justifyContent,
+        marginTop:"20px"}}>
       
       {videos.map((video, index) =>(
         <Box key={index}>

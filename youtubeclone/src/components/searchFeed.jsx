@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 
 const SearchFeed = () => {
-  const [videos, setVideos] = useState([])
+  const [videos, setVideos] = useState(null)
   const {searchTerm} = useParams()
   
 
@@ -16,13 +16,20 @@ const SearchFeed = () => {
     }, [searchTerm]);
 
   return (
-    <Stack sx={{ flexDirection : {xs: 'column', md: 'row'}, height: '95vh', background: '#1b1d21'}}>
+    <Stack sx={{ flexDirection : {xs: 'column', md: 'row'},
+           height: '95vh', background: '#1b1d21'}}>
 
       <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', minHeight: '92vh', overflowY:'auto'}}>
-        <Typography variant='h4' sx={{color: '#fff', marginBottom: '20px', marginLeft: '10px'}}>
-         Search results for: <span style={{color: 'red', fontWeight: '500'}}>{searchTerm}</span> Videos
+        <Typography variant='h4'
+           sx={{color: '#fff',
+           marginBottom: '20px',
+           marginLeft: '10px'}}>
+
+           Search results for:  <span style={{color: 'red', fontWeight: '500'}}>{searchTerm}</span> Videos
         </Typography>
-         <Videos videos = {videos}/>
+        <Box>
+        {<Videos videos = {videos}/>}
+        </Box>
       </Box>
     </Stack>
   )
