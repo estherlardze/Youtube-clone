@@ -6,7 +6,7 @@ import {CheckCircle} from '@mui/icons-material'
 
 const ChannelCard = ({channelDetail, marginTop}) => {
 
-  console.log(channelDetail)
+  // console.log(channelDetail)
   return (
     <Box sx={{display: 'flex',
            alignItems: 'center', 
