@@ -51,7 +51,7 @@ const VideoDetail = () => {
                    {videoDetail?.snippet?.channelTitle}
                    <CheckCircle sx={{fontSize:'16px', color:'grey', marginLeft:"5px"}}/>   
                  </Typography>   
-                 </Link
+                 </Link>
                  <Stack direction='row' marginRight="20px">
                    <Typography color='#fff' variant='subtitle2' mr={2}>
                     {parseInt(videoDetail?.statistics?.likeCount).toLocaleString()} likes
