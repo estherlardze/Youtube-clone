@@ -1,12 +1,17 @@
-import React from 'react'
+import React from 'react';
+import {Box, Stack, Typography} from '@mui/material';
 
-const Comments = ({comment}) => {
+const Comments = ({comment:{snippet: {topLevelComment: {snippet}}}}) => {
 
-    console.log(comment[0]?.snippet?.topLevelComment?.snippet?.textOriginal)
+    console.log(snippet?.authorDisplayNamenippet)
   return (
-    <div>
-     
-    </div>
+    <Stack direction="row">
+      <img src={snippet?.authorProfileImageUrl} alt="" 
+       style={{borderRadius:"50%"}}/>
+      <Box>
+         <Typography>{snippet?.authorDisplayNamenippet}</Typography>
+      </Box>
+    </Stack>
   )
 }
 

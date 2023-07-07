@@ -64,11 +64,11 @@ const VideoDetail = () => {
                </Stack>
             </Box>
     
-            {/* <Box>
+            <Box>
               {comment.map((item) => (
                 <Comments comment={item}/>
               ))}
-            </Box> */}
+            </Box>
          </Box>
 
          <Box alignItems='center' justifyContent='flex-end' px={{xs:'28px', md:"10px"}} flex={1} py={2}>
