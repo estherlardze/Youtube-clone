@@ -15,7 +15,7 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState([]);
   const [comment, setComment] = useState([])
 
-  console.log(comment)
+  // console.log(comment)
 
 
   useEffect(() =>{
@@ -37,9 +37,9 @@ const VideoDetail = () => {
     <Box minHeight='95vh'>
       <Stack direction={{xs:'column', lg:'row'}}> 
 
-         <Box flex={2} marginLeft="10px">
+         <Box flex={2} marginLeft="40px" marginRight="20px">
 
-           <Box  width="100%">
+           <Box  width="100%" marginBottom="20px">
              <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls className="react-player"/>
               <Typography variant="h5" color='#fff' margin={2}>
                 {videoDetail?.snippet?.title}
@@ -59,10 +59,12 @@ const VideoDetail = () => {
                    <Typography color='#fff' variant='subtitle2'>
                     {parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} views
                    </Typography>
+                  
                  </Stack>
 
                </Stack>
             </Box>
+            <hr />
     
             <Box>
               {comment.map((item) => (

@@ -25,7 +25,7 @@ const VideoCard = ({video: {id: {videoId}, snippet}}) => {
          </Typography>
         </Link>
 
-        <Link to={snippet?.channelId ? `channelDetail/${snippet?.channelId}`: demoChannelUrl}>
+        <Link to={snippet?.channelId ? `channel/${snippet?.channelId}`: demoChannelUrl}>
            <Typography variant="subtitle2" sx={{color:'#fff'}}>
              {snippet?.channelTitle || demoChannelTitle}
              <CheckCircle sx={{color: 'gray', ml: "5px", fontSize:"12px"}}/>

@@ -15,9 +15,16 @@ const Feed = () => {
     
 
   return (
-    <Stack sx={{ flexDirection : {xs: 'column', md: 'row'}, height: '95vh', background: '#1b1d21'}}>
+    <Stack 
+       sx={{ flexDirection : {xs: 'column', md: 'row'}, 
+       height: '95vh',
+       background: '#1b1d21'}}
+       >
       <Box sx={{ height: {xs: 'auto', md:'95%'},
-        borderRight: '1px solid #25282b', p: {xs: 0, md:2}, overflowY:'auto'}}>
+        borderRight: '1px solid #25282b', 
+        p: {xs: 0, md:2}, 
+        overflowY:'auto'}}>
+          
         <Sidebar 
         selectedCategory = {selectedCategory}
         setSelectedCategory = {setSelectedCategory}
