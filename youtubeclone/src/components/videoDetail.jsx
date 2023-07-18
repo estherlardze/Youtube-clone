@@ -15,6 +15,10 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState([]);
   const [comment, setComment] = useState([])
 
+console.log(videoDetail)
+console.log(videos)
+console.log(comment)
+
   // console.log(comment)
 
 
@@ -22,7 +26,7 @@ const VideoDetail = () => {
   fetchAPI(`videos?.part=snippet, statistics&id=${id}`)
     .then(data => setVideoDetail(data.items[0]))
 
-  fetchAPI(`search?&part=snippet&relatedToVideoId=${id}&type=video`)
+  fetchAPI(`search?part=snippet&relatedToVideoId=${id}&type=video`)
   .then(data => setVideos(data.items))
 
   fetchAPI(`commentThreads?.part=snippet&videoId=${id}&maxResults=100`)
@@ -68,7 +72,7 @@ const VideoDetail = () => {
     
             <Box>
               {comment.map((item) => (
-                <Comments comment={item}/>
+                <Comments comment={item} key={item.id}/>
               ))}
             </Box>
          </Box>

@@ -8,8 +8,8 @@ const Comments = ({comment:{snippet: {topLevelComment: {snippet}}}}) => {
     console.log(snippet?.authorDisplayNamenippet)
   return (
     <Stack direction="row"  marginBottom= "30px" >
-      <img src={snippet?.authorProfileImageUrl} alt="" 
-       style={{borderRadius:"50%"}}/>
+      <img src={snippet?.authorProfileImageUrl} alt="profile" 
+       style={{borderRadius:"50%"}}  width="50px" height="50px"/>
       <Box marginLeft="20px" color="#fff" >
          <Typography variant="body2" marginBottom="5px">{snippet?.authorDisplayName.toLowerCase()} <span style={{paddingLeft:"10px"}}>{date.toDateString()}</span></Typography>
          <Typography variant="body2">{snippet?.textDisplay}</Typography>
