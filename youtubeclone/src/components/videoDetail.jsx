@@ -66,7 +66,7 @@ const VideoDetail = () => {
             <hr />
     
             <Box>
-              {comment.map((item) => (
+              {comment?.map((item) => (
                 <Comments comment={item} key={item.id}/>
               ))}
             </Box>
