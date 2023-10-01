@@ -5,7 +5,7 @@ import {Box, Typography, Stack} from '@mui/material';
 
 import { fetchAPI } from '../utils/fetchAPI';
 import { CheckCircle } from '@mui/icons-material';
-import {Videos, Comments} from './'
+import {Videos, Comments} from '.'
   
 const VideoDetail = () => {
 
@@ -15,12 +15,7 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState([]);
   const [comment, setComment] = useState([])
 
-console.log(videoDetail)
-console.log(videos)
-console.log(comment)
-
   // console.log(comment)
-
 
   useEffect(() =>{
   fetchAPI(`videos?.part=snippet, statistics&id=${id}`)
