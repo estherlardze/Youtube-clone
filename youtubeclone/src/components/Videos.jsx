@@ -1,11 +1,11 @@
 import React from 'react';
 import { Stack, Box} from '@mui/material';
 import {VideoCard, ChannelCard} from './index'
-import {CircularWithValueLabel} from './Loader'
+import LoadingSpinner from './Loader'
 
 
 const Videos = ({videos, justifyContent}) => {
-  if(!videos?.length) return <CircularWithValueLabel/>;
+  if(!videos?.length) return <LoadingSpinner/>;
 
   return (
     <Stack direction='row' 
