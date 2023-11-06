@@ -2,6 +2,8 @@ import React , {useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player'
 import {Box, Typography, Stack} from '@mui/material';
+import {CircularWithValueLabel} from './Loader'
+
 
 import { fetchAPI } from '../utils/fetchAPI';
 import { CheckCircle } from '@mui/icons-material';
@@ -30,7 +32,7 @@ const VideoDetail = () => {
 
   //  console.log(videoDetail?.snippet?.title)
 
-   if(!videoDetail) return "Loading...";
+   if(!videoDetail) return <CircularWithValueLabel/>
 
   return (
     <Box minHeight='95vh'>

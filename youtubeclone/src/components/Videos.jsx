@@ -1,9 +1,11 @@
 import React from 'react';
 import { Stack, Box} from '@mui/material';
 import {VideoCard, ChannelCard} from './index'
+import {CircularWithValueLabel} from './Loader'
+
 
 const Videos = ({videos, justifyContent}) => {
-  if(!videos?.length) return "Loading...";
+  if(!videos?.length) return <CircularWithValueLabel/>;
 
   return (
     <Stack direction='row' 
