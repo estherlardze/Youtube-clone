@@ -42,7 +42,7 @@ const VideoDetail = () => {
 
            <Box  width="100%" marginBottom="20px">
              <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls className="react-player"/>
-              <Typography variant="h5" color='#fff' margin={2}>
+              <Typography variant="h6" color='#fff' margin={2}>
                 {videoDetail?.snippet?.title}
                </Typography>
 
