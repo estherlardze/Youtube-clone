@@ -35,7 +35,7 @@ const VideoDetail = () => {
    if(!videoDetail) return <LoadingSpinner/>
 
   return (
-    <Box minHeight='95vh'>
+    <Box minHeight='95vh' overflow="hidden">
       <Stack direction={{xs:'column', lg:'row'}}> 
 
          <Box flex={2} marginLeft="40px" marginRight="20px">
