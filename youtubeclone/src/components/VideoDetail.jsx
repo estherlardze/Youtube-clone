@@ -46,7 +46,7 @@ const VideoDetail = () => {
                 {videoDetail?.snippet?.title}
                </Typography>
 
-               <Stack direction="row" justifyContent="space-between">
+               <Stack direction={{xs:'column', lg:'row'}} justifyContent="space-between">
                 <Link to={`/channel?.${videoDetail.snippet.channelId}`}> 
                  <Typography variant='subtitle2' color='#fff' margin={1} fontWeight={500}>
                    {videoDetail?.snippet?.channelTitle}
